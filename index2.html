@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <style>
+      button{
+        background-color: teal;
+        color: white;
+        height: 30px;
+        width: 80px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  
+  <body>
+      <h2 id="heading">Please Signup....</h2>
+      <input id="username" type="text" placeholder="enter username" />
+       <input id="password" type="password" placeholder="enter password" />
+      <button id="btn" >Sign up..</button>
+  </body>
+  
+  <script>
+    let btn = document.getElementById("btn");
+    
+    btn.addEventListener("click", function(){
+      let username = document.getElementById("username").value;
+      let heading = document.getElementById("heading");
+      heading.innerText = "Hi, "+username;
+      // alert("Hi "+username)
+      btn.innerText = "Thanks"
+      
+    });
+    
+  </script>
+</html>

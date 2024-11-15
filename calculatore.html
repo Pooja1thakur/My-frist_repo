@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Simple Calculator</title>
+    
+    <style>
+       /* Please Add All The Styles Here in the Style Tag */
+         body{
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+  
+       .calculator {
+         
+            width: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .display {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            text-align: right;
+            padding: 5px;
+            background-color:white;
+            border: none;
+            color: black;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 4px;
+            background-color: white;
+            font-weight: bold;
+            color: balck;
+            cursor: pointer;
+             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        input.operator {
+            background-color:black;
+            color: white;
+        }
+        input.clear {
+            background-color: red;
+        }
+        input.equal {
+            background-color:black;
+            color: white;
+           
+        }
+        h1{
+          text-align: center;
+          margin-top: 0px;
+          color: green;
+        }
+        button:hover{
+          background-color: aqua;
+        }
+    </style>
+  </head>
+  <body>
+    
+  <div class="container">
+    
+ <h1> Masai Calculator</h1>
+
+      
+
+   <div class="calculator">
+     
+    
+        <input type="text" id="display" class="display" >
+        <div class="buttons">
+          <input value="1" type="button" onclick="pick(1)">
+          <input value="2" type="button" onclick="pick(2)">
+          <input value="3" type="button" onclick="pick(3)">
+            <input class="operator"  type="button" value="+" onclick="pick('+')">
+            
+            <input value="4" type="button" onclick="pick(4)">
+            <input value="5" type="button" onclick="pick(5)">
+            <input value="6" type="button" onclick="pick(6)">
+              <input class="operator"  type="button" value="-" onclick="pick('-')">
+            
+              <input value="7" type="button" onclick="pick(7)">
+              <input value="8" type="button" onclick="pick(8)">
+              <input value="9" type="button" onclick="pick(9)">
+                <input class="operator"  type="button" value="*" onclick="pick('*')">
+            
+           
+            
+           
+                <input value="c"  class="clear"  type="button" onclick="clr()">
+                <input value="0" type="button" onclick="pick(0)">
+                <input class="operator" value="=" type="button" onclick="solve()">
+                  <input class="operator"  type="button" value="/" onclick="pick('/')">
+        </div>
+    </div>
+     </div>
+
+    <script>
+ function pick(val){
+  document.getElementById("display").value += val
+  
+
+ }
+ function solve(){
+ let x= document.getElementById("display")
+ 
+//let y=eval(x);
+//document.getElementById("display").value=y;
+let expression = display.value;
+
+// Check if expression contains division by zero
+if (expression.includes('/0')) {
+    alert("Cannot divide by zero");
+    clr();
+} else if (expression === "") {
+    alert("Enter a valid expression");
+} else {
+    // Evaluate the expression if valid
+    display.value = eval(expression);
+}
+
+ }
+
+ 
+ function clr(){
+  document.getElementById("display").value = " "
+  
+ }
+
+    </script>
+    </body>
+</html>
