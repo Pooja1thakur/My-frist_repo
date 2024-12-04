@@ -90,3 +90,22 @@
 // //print the binary square.
 // let n=2;
   
+
+
+
+
+
+function fun(n){
+    for(let i=1;i<=n;i++){
+        let temp="";
+        for(let j=1;j<=n-i;j++){
+temp+=" "
+        }
+        for(let j=1;j<=(2*i)-1;j++){
+        temp+=" "
+     return (temp)
+        }
+    }
+}
+fun(5)
+
